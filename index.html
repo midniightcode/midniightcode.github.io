@@ -32,7 +32,7 @@
                         <li><a href="Art-portfolio.html">Art Portfolio</a></li>
                         <li><a href="planner-tables.html">Planner Tables</a></li>
                         <li><a href="/cyber-site/index.html">San-Jac Cybersecurity Site</a></li>
-                        <li><a href="/starbucks-clone/index.html">Starbucks Clone</a></li> 
+                        <li><a href="star-bucks.html">Starbucks Clone</a></li> 
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -199,31 +199,39 @@
     <!-- Projects Preview -->
     <section id="projects" class="projects">
         <h2>Featured Projects</h2>
+    
         <div class="grid">
-            <!-- Project 1 -->
+    
             <div class="card">
-                <video muted controls class="project-video" poster="images/display-zoo.jpg">
-                    <source src="videos/Parque De Las Leyendas (FINAL PROJECT).mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="video-wrapper">
+                    <div class="video-thumbnail"
+                         onclick="loadVideo(this, 'q6G2WlneA84')"
+                         style="background-image: url('images/display-zoo.jpg');">
+                        <div class="play-button"></div>
+                    </div>
+                </div>
+    
                 <h3>FINAL PROJECT</h3>
                 <h5>This project requires a local PHP/MySQL environment to run.</h5>
-                <p>A completed PHP and SQL website displaying both the back and front end for 'Parque de las Leyendas'.
-                </p>
+                <p>A completed PHP and SQL website displaying both the back and front end.</p>
                 <a href="learn-more.html">Learn More</a>
             </div>
-
-            <!-- Project 2 -->
+    
             <div class="card">
-                <video muted controls class="project-video" poster="images/Gym-display.jpg">
-                    <source src="videos/Gym-Project.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div class="video-wrapper">
+                    <div class="video-thumbnail"
+                         onclick="loadVideo(this, 'VofvyO-tXG0')"
+                         style="background-image: url('images/Gym-display.jpg');">
+                        <div class="play-button"></div>
+                    </div>
+                </div>
+    
                 <h3>Fitness Club Website</h3>
                 <h5>This project requires a local PHP/MySQL environment to run.</h5>
-                <p>A working PHP and SQL based website with its own database fully functional front end.</p>
+                <p>A working PHP and SQL based website.</p>
                 <a href="learn-more-2.html">Learn More</a>
             </div>
+    
         </div>
     </section>
 
@@ -272,8 +280,25 @@
         hamburger.addEventListener("click", () => {
             navLinks.classList.toggle("show");
         });
+
+        //project video JS
+       function loadVideo(element, videoId) {
+        element.parentElement.innerHTML = `
+            <iframe 
+                src="https://www.youtube.com/embed/${videoId}?autoplay=1"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+        `;
+    }
     </script>
 
 </body>
 
+
 </html>
+
+
+
+
+
