@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinai's Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/2ndlogo.png" alt="Sinai Hernandez logo">
+            </div>
+    
+            <!-- Hamburger button -->
+            <button class="hamburger" aria-label="Toggle menu">☰</button>
+    
+            <ul class="nav-links">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-toggle">Projects ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Art-portfolio.html">Art Portfolio</a></li>
+                        <li><a href="/cyber-site/index.html">San-Jac Cybersecurity Site</a></li>
+                        <li><a href="fav-list.html">Favorite Lists</a></li>
+                        <li><a href="planner-tables.html">Planner Tables</a></li>
+                        <li><a href="star-bucks.html">Starbucks Clone</a></li>
+                        <li><a href="wishlist.html">My Wishlist</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="planner-grid">
+
+            <div class="table-container">
+            <table>
+                <caption>Cybersecurity Club Website Weekly Schedule</caption>
+                <!-- Table 1: Weekly Schedule -->
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>9–11 AM</th>
+                        <th>11–1 PM</th>
+                        <th>1–3 PM</th>
+                        <th>3–5 PM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Wireframe Design</td>
+                        <td colspan="2">Club Page Layout in Figma</td>
+                        <td>HTML Structure Review</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Accessibility Audit</td>
+                        <td>Navigation Testing</td>
+                        <td>CSS Styling</td>
+                        <td>Backup Strategy Setup</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td colspan="4">Extended Coding Session (Forms, PHP, and Validation)</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Security Tips Section</td>
+                        <td>Image Optimization</td>
+                        <td>Peer Feedback</td>
+                        <td>GitHub Sync</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-container table-two">
+            <table>
+                <caption>Cybersecurity Website Project Tasks</caption>
+                <!-- Table 2: Multi-Day Task List -->
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Day</th>
+                        <th>Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3">Homepage Development</td>
+                        <td>Monday</td>
+                        <td>Wireframe and Layout Planning</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Semantic HTML Implementation</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Accessibility and Mobile Responsiveness</td>
+                    </tr>
+                    <tr>
+                        <td>Security Resources Page</td>
+                        <td>Thursday</td>
+                        <td>Content Draft and External Link Integration</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Testing & Deployment</td>
+                        <td>Friday</td>
+                        <td>Cross-Browser Testing</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>Final Deployment to Club Server</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sinai Hernandez</p>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
+            <a href="#">X</a>
+            <a href="https://github.com/BloomingMidnightlight">GitHub</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Scroll fade background
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = scrollTop / docHeight;
+            const shade = Math.floor(scrollPercent * 255);
+            document.body.style.backgroundColor = `rgb(${shade}, ${shade}, ${shade})`;
+        });
+
+        // Dropdown toggle for mobile
+        document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+            toggle.addEventListener("click", e => {
+                e.preventDefault();
+                const parent = toggle.parentElement;
+                document.querySelectorAll(".dropdown").forEach(drop => {
+                    if (drop !== parent) drop.classList.remove("open");
+                });
+                parent.classList.toggle("open");
+            });
+        });
+
+        // Hamburger toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+    </script>
+
+</body>
+
+</html>
