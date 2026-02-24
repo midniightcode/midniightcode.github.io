@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinai's Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/2ndlogo.png" alt="Sinai Hernandez logo">
+            </div>
+    
+            <!-- Hamburger button -->
+            <button class="hamburger" aria-label="Toggle menu">☰</button>
+    
+            <ul class="nav-links">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-toggle">Projects ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Art-portfolio.html">Art Portfolio</a></li>
+                        <li><a href="/cyber-site/index.html">San-Jac Cybersecurity Site</a></li>
+                        <li><a href="fav-list.html">Favorite Lists</a></li>
+                        <li><a href="planner-tables.html">Planner Tables</a></li>
+                        <li><a href="star-bucks.html">Starbucks Clone</a></li>
+                        <li><a href="wishlist.html">My Wishlist</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <!-- Contact Form Section -->
+        <section>
+            <h2>Get in Touch!</h2>
+            <p>I'd love to hear from you. Fill out the form below to send a message or ask a question.</p>
+
+            <form action="#" method="GET">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject">
+                    <option value="general">General Inquiry</option>
+                    <option value="collaboration">Project Collaboration</option>
+                    <option value="feedback">Site Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="submit-btn">Submit</button>
+                <button type="reset" class="reset-btn">Reset</button>
+            </form>
+        </section>
+
+        <!-- Survey Section -->
+        <section>
+            <h2>Quick Survey</h2>
+            <p>Your feedback helps me improve! Please take a moment to answer these questions.</p>
+
+            <form action="#" method="GET">
+                <label for="find">How did you find my portfolio?</label>
+                <select id="find" name="find">
+                    <option value="google">Google Search</option>
+                    <option value="social">Social Media</option>
+                    <option value="referral">Referral</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label>Rate your overall experience on my site:</label>
+                <div class="rating-group">
+                    <input type="radio" id="rate1" name="rating" value="1">
+                    <label for="rate1">1</label>
+                
+                    <input type="radio" id="rate2" name="rating" value="2">
+                    <label for="rate2">2</label>
+                
+                    <input type="radio" id="rate3" name="rating" value="3">
+                    <label for="rate3">3</label>
+                
+                    <input type="radio" id="rate4" name="rating" value="4">
+                    <label for="rate4">4</label>
+                
+                    <input type="radio" id="rate5" name="rating" value="5">
+                    <label for="rate5">5</label>
+                </div>
+
+
+                <label for="comments">Any additional comments?</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+
+                <button type="submit" class="submit-btn">Submit Survey</button>
+                <button type="reset" class="reset-btn">Reset Survey</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sinai Hernandez</p>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
+            <a href="#">X</a>
+            <a href="https://github.com/BloomingMidnightlight">GitHub</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Scroll fade background
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = scrollTop / docHeight;
+            const shade = Math.floor(scrollPercent * 255);
+            document.body.style.backgroundColor = `rgb(${shade}, ${shade}, ${shade})`;
+        });
+
+        // Dropdown toggle for mobile
+        document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+            toggle.addEventListener("click", e => {
+                e.preventDefault();
+                const parent = toggle.parentElement;
+                document.querySelectorAll(".dropdown").forEach(drop => {
+                    if (drop !== parent) drop.classList.remove("open");
+                });
+                parent.classList.toggle("open");
+            });
+        });
+
+        // Hamburger toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+    </script>
+</body>
+
+</html>

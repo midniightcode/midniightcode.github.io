@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Club - About</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon-SJ.ico" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    :root {
+      --royal-blue: #002666;
+      --gold: #ffc107;
+      --white: #ffffff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header active link */
+    .navbar-nav .nav-link.active {
+      font-weight: bold;
+      color: var(--gold) !important;
+    }
+
+    /* About Page */
+    .about-container h2,
+    .about-container h3 {
+      color: var(--royal-blue);
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    /* Mission Section */
+    .mission {
+      background-color: rgba(255,223,0,0.1);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 3rem;
+    }
+
+    /* Values Carousel */
+    .carousel-inner img {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .carousel-item h4 {
+      color: var(--royal-blue);
+    }
+    .carousel-item p {
+      color: #333;
+    }
+
+    /* Team Section */
+    .team {
+      margin-top: 3rem;
+    }
+    .team-members {
+      gap: 1.5rem;
+    }
+    .member {
+      flex: 1 1 200px;
+      padding: 1rem;
+      border-radius: 12px;
+      background-color: rgba(255,223,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+    .member:hover {
+      transform: translateY(-5px);
+    }
+    .initials {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: var(--royal-blue);
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1rem;
+    }
+    .member-info h4 {
+      margin-bottom: 0.3rem;
+      color: var(--royal-blue);
+    }
+    .member-info p {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    /* Footer hover icons */
+    .footer-combined a img:hover {
+      transform: scale(1.1);
+      transition: 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand logo" href="index.html">Cybersecurity Club</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAbout"
+          aria-controls="navbarNavAbout" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavAbout">
+          <ul class="navbar-nav ms-auto main-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.eccouncil.org/" target="_blank" rel="noopener noreferrer">
+                EC-Council
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main About Content -->
+  <main class="section py-5">
+    <div class="container about-container">
+
+      <!-- About Us -->
+      <h2 class="mb-4">About Us</h2>
+      <p class="intro">
+        We are a community of passionate students dedicated to cybersecurity.
+        Through workshops, guest speakers, and Capture-the-Flag competitions,
+        we empower members to develop real-world skills and grow professionally.
+      </p>
+
+      <!-- Mission Section -->
+      <section class="mission">
+        <h3>Our Mission</h3>
+        <p>
+          To educate and inspire future cybersecurity professionals by providing
+          hands-on learning, collaboration, and mentorship.
+        </p>
+      </section>
+
+      <!-- Values Section -->
+      <section class="values py-5 bg-light">
+        <h3 class="text-center mb-4">Our Core Values</h3>
+
+        <div id="valuesCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Core Values Carousel">
+
+          <div class="carousel-inner text-center">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-4">
+                  <img src="images/security-first.jpg" class="d-block w-100 rounded shadow-sm mb-3"
+                       alt="Security First Icon">
+                </div>
+                <div class="col-md-6 text-start">
+                  <h4>Security First</h4>
+                  <p>Promote best practices in cybersecurity.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-4">
+                  <img src="images/community.jpg" class="d-block w-100 rounded shadow-sm mb-3" alt="Community Icon">
+                </div>
+                <div class="col-md-6 text-start">
+                  <h4>Community</h4>
+                  <p>Foster a supportive and inclusive environment.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-4">
+                  <img src="images/growth.jpg" class="d-block w-100 rounded shadow-sm mb-3" alt="Growth Icon">
+                </div>
+                <div class="col-md-6 text-start">
+                  <h4>Growth</h4>
+                  <p>Encourage continuous learning and innovation.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <div class="row justify-content-center align-items-center">
+                <div class="col-md-4">
+                  <img src="images/excellence.jpg" class="d-block w-100 rounded shadow-sm mb-3" alt="Excellence Icon">
+                </div>
+                <div class="col-md-6 text-start">
+                  <h4>Excellence</h4>
+                  <p>Strive for professional and ethical standards.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Carousel Controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#valuesCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#valuesCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+          <!-- Carousel Indicators -->
+          <div class="carousel-indicators mt-3">
+            <button type="button" data-bs-target="#valuesCarousel" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Security First"></button>
+            <button type="button" data-bs-target="#valuesCarousel" data-bs-slide-to="1" aria-label="Community"></button>
+            <button type="button" data-bs-target="#valuesCarousel" data-bs-slide-to="2" aria-label="Growth"></button>
+            <button type="button" data-bs-target="#valuesCarousel" data-bs-slide-to="3" aria-label="Excellence"></button>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="team mt-5">
+        <h3 class="mb-4 text-center">Meet the Team</h3>
+
+        <div class="container">
+          <div class="row g-4">
+
+            <!-- Row 1 -->
+            <div class="col-md-6">
+              <div class="member text-center p-4 rounded shadow-sm" style="background-color: rgba(255,223,0,0.1);">
+                <div class="initials">RW</div>
+                <div class="member-info">
+                  <h4>Roger Watkins</h4>
+                  <p>Director, Business/Computer Tech Services</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="member text-center p-4 rounded shadow-sm" style="background-color: rgba(255,223,0,0.1);">
+                <div class="initials">AL</div>
+                <div class="member-info">
+                  <h4>Alyssa Lozano</h4>
+                  <p>Professor, Cybersecurity & Cloud Computing</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="col-md-6">
+              <div class="member text-center p-4 rounded shadow-sm" style="background-color: rgba(255,223,0,0.1);">
+                <div class="initials">ES</div>
+                <div class="member-info">
+                  <h4>Eric Servin</h4>
+                  <p>Professor, Cybersecurity & Cloud Computing</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="member text-center p-4 rounded shadow-sm" style="background-color: rgba(255,223,0,0.1);">
+                <div class="initials">RV</div>
+                <div class="member-info">
+                  <h4>Rizwan Virani</h4>
+                  <p>Senior Director, Cybersecurity Programs</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-combined"
+          style="background-color: var(--royal-blue); color: var(--white); padding: 1.5rem 0; margin-top: 2rem; border-top: 4px solid var(--gold); box-shadow: 0 -2px 8px rgba(0,0,0,0.2);">
+
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+      <div class="d-flex align-items-center mb-3 mb-md-0">
+        <img src="images/logo.png" alt="Website Logo" class="footer-logo me-3" style="width:60px; height:auto;">
+        <div>
+          <p class="mb-1">Designed by: Group 2</p>
+        </div>
+      </div>
+
+      <div class="text-md-end">
+        <p class="mb-1">Cybersecurity Club</p>
+        <p class="mb-2 small">Follow us on social media:</p>
+
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="me-2">
+          <img src="images/facebook-logo.png" alt="Facebook logo" style="width:30px; height:30px;">
+        </a>
+
+        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="me-2">
+          <img src="images/twitter-logo.png" alt="Twitter logo" style="width:30px; height:30px;">
+        </a>
+
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/linkedin-logo.png" alt="LinkedIn logo" style="width:30px; height:30px;">
+        </a>
+
+        <p class="mt-2 mb-0 small">&copy; 2025 Cybersecurity Club. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/script.js"></script>
+
+</body>
+</html>

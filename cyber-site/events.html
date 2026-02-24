@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Club - Events</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="images/x-icon" href="images/favicon-SJ.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    :root {
+      --royal-blue: #002666;
+      --gold: #ffc107;
+      --white: #ffffff;
+      --light-yellow: #fff9e6;
+    }
+
+    h2, h3, h5, .card-title { color: var(--royal-blue); }
+    .card.event-card { background-color: var(--light-yellow); border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .card a { color: var(--royal-blue); text-decoration: none; }
+    .card a:hover { color: var(--gold); }
+    .card-date { font-weight: bold; color: var(--royal-blue); }
+    main.section { background-color: #fffdf7; padding-top: 3rem; padding-bottom: 3rem; }
+    .footer-combined { background-color: var(--royal-blue); color: var(--white); border-top: 4px solid var(--gold); }
+    .footer-combined a img:hover { transform: scale(1.1); transition: 0.3s ease; }
+    .table thead { background-color: #fff8e1; color: var(--royal-blue); }
+    .table-striped tbody tr:nth-of-type(odd) { background-color: #fff9e6; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand logo" href="index.html">Cybersecurity Club</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavEvents"
+          aria-controls="navbarNavEvents" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavEvents">
+          <ul class="navbar-nav ms-auto main-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item active"><a class="nav-link" href="events.html">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.eccouncil.org/" target="_blank">EC-Council</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Events Content -->
+  <main class="section">
+    <div class="container events-container">
+      <h2>Upcoming Events</h2>
+      <p class="intro">Join our workshops, seminars, and competitions to develop real-world cybersecurity skills!</p>
+
+      <!-- Event Cards -->
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card event-card gallery-img" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+               data-title="Cybersecurity Workshop" data-caption="Hands-on lab learning for beginners and advanced students.">
+            <img class="card-img-top img-fluid" src="images/CyberWorkshop.jpg" alt="Event 1">
+            <div class="card-body">
+              <h5 class="card-title">Cybersecurity Workshop</h5>
+              <p class="card-text">Hands-on lab learning for beginners and advanced students.</p>
+              <p class="card-date">Date: Nov 30, 2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card event-card gallery-img" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+               data-title="CTF Competition" data-caption="Team-based Capture-the-Flag challenge for all skill levels.">
+            <img class="card-img-top img-fluid" src="images/CTF_1.jpg" alt="Event 2">
+            <div class="card-body">
+              <h5 class="card-title">CTF Competition</h5>
+              <p class="card-text">Team-based Capture-the-Flag challenge for all skill levels.</p>
+              <p class="card-date">Date: Dec 10, 2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+          <div class="card event-card gallery-img" data-bs-toggle="modal" data-bs-target="#lightboxModal" 
+               data-title="Guest Speaker: EC-Council" data-caption="Learn about the latest trends in cybersecurity from industry experts.">
+            <img class="card-img-top img-fluid" src="images/GuestSpeaker.jpeg" alt="Event 3">
+            <div class="card-body">
+              <h5 class="card-title">Guest Speaker: EC-Council</h5>
+              <p class="card-text">Learn about the latest trends in cybersecurity from industry experts.</p>
+              <p class="card-date">Date: Dec 20, 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Table -->
+      <h3 class="mt-5">Event Schedule</h3>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped table-sm">
+          <thead class="table-light">
+            <tr>
+              <th>Event</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cybersecurity Workshop</td>
+              <td>Nov 30, 2025</td>
+              <td>10:00 AM - 1:00 PM</td>
+              <td>Room 101</td>
+            </tr>
+            <tr>
+              <td>CTF Competition</td>
+              <td>Dec 10, 2025</td>
+              <td>2:00 PM - 5:00 PM</td>
+              <td>Lab 202</td>
+            </tr>
+            <tr>
+              <td>Guest Speaker: EC-Council</td>
+              <td>Dec 20, 2025</td>
+              <td>12:00 PM - 1:30 PM</td>
+              <td>Auditorium</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="lightboxModalLabel"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="lightboxImage" class="img-fluid" src="" alt="">
+          <p id="lightboxCaption" class="mt-2"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-combined" style="background-color: var(--royal-blue); color: var(--white); padding: 1.5rem 0; margin-top: 2rem; border-top: 4px solid var(--gold); box-shadow: 0 -2px 8px rgba(0,0,0,0.2);">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="d-flex align-items-center mb-3 mb-md-0">
+        <img src="images/logo.png" alt="Website Logo" class="footer-logo me-3" style="width:60px; height:auto;">
+        <div>
+          <p class="mb-1">Designed by: Group 2</p>
+        </div>
+      </div>
+      <div class="text-md-end">
+        <p class="mb-1">Cybersecurity Club</p>
+        <p class="mb-2 small">Follow us on social media:</p>
+        <a href="https://www.facebook.com" target="_blank" class="me-2">
+          <img src="images/facebook-logo.png" alt="Facebook logo" style="width:30px; height:30px;">
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="me-2">
+          <img src="images/twitter-logo.png" alt="Twitter logo" style="width:30px; height:30px;">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+          <img src="images/linkedin-logo.png" alt="LinkedIn logo" style="width:30px; height:30px;">
+        </a>
+        <p class="mt-2 mb-0 small">&copy; 2025 Cybersecurity Club. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

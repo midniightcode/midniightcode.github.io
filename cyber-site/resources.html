@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Club - Resources</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="images/favicon-SJ.ico" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    :root {
+      --royal-blue: #002666;
+      --gold: #ffc107;
+      --white: #ffffff;
+      --light-yellow: #fff9e6;
+    }
+
+    /* Headings */
+    h2, h5, .card-title { color: var(--royal-blue); }
+
+    /* Cards with light yellow background */
+    .card {
+      background-color: var(--light-yellow);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Links inside cards */
+    .card a { color: var(--royal-blue); text-decoration: none; }
+    .card a:hover { color: var(--gold); }
+
+    /* Multimedia section headings */
+    .multimedia-section h2, .multimedia-section h5 { color: var(--royal-blue); }
+
+    /* Call to Action Button */
+    .join-us-section .btn-primary {
+      background-color: var(--royal-blue);
+      border-color: var(--royal-blue);
+    }
+    .join-us-section .btn-primary:hover {
+      background-color: var(--gold);
+      border-color: var(--gold);
+      color: var(--royal-blue);
+    }
+
+    /* Footer colors */
+    .footer-combined { background-color: var(--royal-blue); color: var(--white); border-top: 4px solid var(--gold); }
+    .footer-combined a img:hover { transform: scale(1.1); transition: 0.3s ease; }
+
+    /* Optional: slightly yellowish background for main section */
+    main.section { background-color: #fffdf7; }
+
+    /* Thumbnail images */
+    .gallery-thumb { cursor: pointer; border-radius: 8px; transition: transform 0.2s; }
+    .gallery-thumb:hover { transform: scale(1.05); }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand logo" href="index.html">Cybersecurity Club</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavResources" aria-controls="navbarNavResources" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavResources">
+        <ul class="navbar-nav ms-auto main-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+          <li class="nav-item active"><a class="nav-link" href="resources.html" aria-current="page">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.eccouncil.org/" target="_blank" rel="noopener noreferrer">EC-Council</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero Image -->
+<section class="hero-banner">
+  <img src="images/CyberWorkshop.jpg" class="img-fluid w-100" style="max-height:300px; object-fit:cover;" alt="Cybersecurity Resources Banner">
+</section>
+
+<!-- Main Content -->
+<main class="section py-5">
+  <div class="container resources-container">
+    <h2 class="mb-4">Cybersecurity Learning Resources</h2>
+    <p class="lead mb-5">Explore our curated list of trusted resources to boost your cybersecurity knowledge, skills, and certifications.</p>
+
+    <!-- Resource Grid -->
+    <div class="row g-4 mb-5">
+      <!-- Online Courses -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Online Courses</h5>
+            <ul>
+              <li><a href="https://www.cybrary.it/" target="_blank" rel="noopener noreferrer">Cybrary</a> — Free & paid cybersecurity courses</li>
+              <li><a href="https://www.udemy.com/topic/cyber-security/" target="_blank" rel="noopener noreferrer">Udemy</a> — Extensive cybersecurity courses</li>
+              <li><a href="https://www.coursera.org/browse/information-technology/cybersecurity" target="_blank" rel="noopener noreferrer">Coursera</a> — Cybersecurity Specializations</li>
+            </ul>
+
+            <!-- Gallery Thumbnails -->
+            <div class="row mt-3">
+              <div class="col-4">
+                <img src="images/cybrary.jpg" class="img-fluid gallery-thumb" data-bs-toggle="modal" data-bs-target="#modalCourses" data-bs-slide-to="0" alt="Beginner Guides">
+              </div>
+              <div class="col-4">
+                <img src="images/Udemy.jpg" class="img-fluid gallery-thumb" data-bs-toggle="modal" data-bs-target="#modalCourses" data-bs-slide-to="1" alt="Udemy">
+              </div>
+              <div class="col-4">
+                <img src="images/Coursera.jpg" class="img-fluid gallery-thumb" data-bs-toggle="modal" data-bs-target="#modalCourses" data-bs-slide-to="2" alt="Coursera">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Labs -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Tools & Labs</h5>
+            <ul>
+              <li><a href="https://kali.org/" target="_blank" rel="noopener noreferrer">Kali Linux</a> — Penetration testing platform</li>
+              <li><a href="https://www.wireshark.org/" target="_blank" rel="noopener noreferrer">Wireshark</a> — Network protocol analyzer</li>
+              <li><a href="https://www.hackthebox.eu/" target="_blank" rel="noopener noreferrer">Hack The Box</a> — Hands-on hacking labs</li>
+            </ul>
+
+            <!-- Gallery Thumbnails -->
+            <div class="row mt-3">
+              <div class="col-4">
+                <img src="images/Kali-linux.jpg" class="img-fluid gallery-thumb" data-bs-toggle="modal" data-bs-target="#modalTools" data-bs-slide-to="0" alt="Kali Linux">
+              </div>
+              <div class="col-4">
+                <img src="images/Wireshack.jpg" class="img-fluid gallery-thumb" data-bs-toggle="modal" data-bs-target="#modalTools" data-bs-slide-to="1" alt="Wireshark">
+              </div>
+              <div class="col-4">
+                <img src="images/Hackthebox.jpg" class="img-fluid gallery-thumb" data-bs-toggle="modal" data-bs-target="#modalTools" data-bs-slide-to="2" alt="Hack The Box">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reading & References -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Reading & References</h5>
+            <ul>
+              <li><a href="https://www.owasp.org/index.php/Main_Page" target="_blank" rel="noopener noreferrer">OWASP</a> — Security knowledge base</li>
+              <li><a href="https://www.nist.gov/topics/cybersecurity" target="_blank" rel="noopener noreferrer">NIST Cybersecurity Framework</a></li>
+              <li><a href="https://www.securityweekly.com/" target="_blank" rel="noopener noreferrer">Security Weekly</a> — Cybersecurity news & podcasts</li>
+            </ul>
+
+            <!-- Gallery Thumbnails -->
+            <div class="row mt-3">
+              <div class="col-4">
+                <img src="images/Owasp.jpg" class="img-fluid gallery-thumb" data-bs-toggle="modal" data-bs-target="#modalReading" data-bs-slide-to="0" alt="OWASP">
+              </div>
+              <div class="col-4">
+                <img src="images/Nist.jpg" class="img-fluid gallery-thumb" data-bs-toggle="modal" data-bs-target="#modalReading" data-bs-slide-to="1" alt="NIST">
+              </div>
+              <div class="col-4">
+                <img src="images/Securityweekly.jpg" class="img-fluid gallery-thumb" data-bs-toggle="modal" data-bs-target="#modalReading" data-bs-slide-to="2" alt="Security Weekly">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Multimedia Section -->
+    <section class="multimedia-section mb-5">
+      <h2>Cybersecurity Multimedia</h2>
+      <p>Watch and listen to our featured cybersecurity video and audio resources.</p>
+
+      <!-- Audio Player -->
+      <div class="mb-4" aria-label="Cybersecurity Club Audio Player">
+        <h5>Cybersecurity Club Audio</h5>
+        <audio controls class="w-100">
+          <source src="media/CyberSecurity-VideoAnimationServices.mp3" type="audio/mpeg">
+          <source src="media/CyberSecurity-VideoAnimationServices.ogg" type="audio/ogg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <!-- Video Player -->
+      <div class="mb-4" aria-label="Cybersecurity Club Video Player">
+        <h5>Cybersecurity Club Video</h5>
+        <video controls poster="images/Cybersecurity.webp" class="w-100">
+          <source src="media/CyberSecurity-VideoAnimationServices.mp4" type="video/mp4">
+          <source src="media/CyberSecurity-VideoAnimationServices.webm" type="video/webm">
+          <track src="media/CyberSecurityCaptions.vtt" kind="captions" srclang="en" label="English">
+          <track src="media/CyberSecurityDescriptions.vtt" kind="descriptions" srclang="en" label="Audio Descriptions">
+          Your browser does not support the video element.
+        </video>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="join-us-section text-center py-5" style="background-color: var(--gold); color: var(--royal-blue); border-radius: 12px; margin: 3rem 0;">
+      <h2>Ready to Take Your Cybersecurity Skills Further?</h2>
+      <p>Join the Cybersecurity Club today and participate in workshops, competitions, and exclusive learning opportunities.</p>
+      <a href="contact.html" class="btn btn-dark btn-lg cta-btn">Join Us</a>
+    </section>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer-combined" style="background-color: var(--royal-blue); color: var(--white); padding: 1.5rem 0; border-top: 4px solid var(--gold); box-shadow: 0 -2px 8px rgba(0,0,0,0.2);">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left: Logo + Designer -->
+      <div class="col-md-6 d-flex align-items-center mb-3 mb-md-0">
+        <img src="images/logo.png" alt="Website Logo" class="footer-logo me-3" style="width:60px; height:auto;">
+        <p class="mb-0">Designed by: Group 2</p>
+      </div>
+      <!-- Right: Club info + Social -->
+      <div class="col-md-6 text-md-end">
+        <p class="mb-1">Cybersecurity Club</p>
+        <p class="mb-2 small">Follow us on social media:</p>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="me-2">
+          <img src="images/facebook-logo.png" alt="Facebook logo" style="width:30px; height:30px;">
+        </a>
+        <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="me-2">
+          <img src="images/twitter-logo.png" alt="Twitter logo" style="width:30px; height:30px;">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/linkedin-logo.png" alt="LinkedIn logo" style="width:30px; height:30px;">
+        </a>
+        <p class="mt-2 mb-0 small">&copy; 2025 Cybersecurity Club. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox Modals -->
+
+<!-- Courses Modal -->
+<div class="modal fade" id="modalCourses" tabindex="-1" aria-labelledby="modalCoursesLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCoursesLabel">Online Courses</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="carouselCourses" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/cybrary.jpg" class="d-block w-100" alt="Cybrary">
+              <div class="carousel-caption d-none d-md-block text-dark bg-light bg-opacity-75 rounded">
+                Cybrary — Free & paid cybersecurity courses
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/Udemy.jpg" class="d-block w-100" alt="Udemy">
+              <div class="carousel-caption d-none d-md-block text-dark bg-light bg-opacity-75 rounded">
+                Udemy — Extensive cybersecurity courses
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/Coursera.jpg" class="d-block w-100" alt="Coursera">
+              <div class="carousel-caption d-none d-md-block text-dark bg-light bg-opacity-75 rounded">
+                Coursera — Cybersecurity Specializations
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselCourses" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselCourses" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tools Modal -->
+<div class="modal fade" id="modalTools" tabindex="-1" aria-labelledby="modalToolsLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalToolsLabel">Tools & Labs</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="carouselTools" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/Kali-linux.jpg" class="d-block w-100" alt="Kali Linux">
+              <div class="carousel-caption d-none d-md-block text-dark bg-light bg-opacity-75 rounded">
+                Kali Linux — Penetration testing platform
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/Wireshack.jpg" class="d-block w-100" alt="Wireshark">
+              <div class="carousel-caption d-none d-md-block text-dark bg-light bg-opacity-75 rounded">
+                Wireshark — Network protocol analyzer
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/Hackthebox.jpg" class="d-block w-100" alt="Hack The Box">
+              <div class="carousel-caption d-none d-md-block text-dark bg-light bg-opacity-75 rounded">
+                Hack The Box — Hands-on hacking labs
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselTools" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselTools" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Reading Modal -->
+<div class="modal fade" id="modalReading" tabindex="-1" aria-labelledby="modalReadingLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-light">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalReadingLabel">Reading & References</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="carouselReading" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/Owasp.jpg" class="d-block w-100" alt="OWASP">
+              <div class="carousel-caption d-none d-md-block text-dark bg-light bg-opacity-75 rounded">
+                OWASP — Security knowledge base
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/Nist.jpg" class="d-block w-100" alt="NIST">
+              <div class="carousel-caption d-none d-md-block text-dark bg-light bg-opacity-75 rounded">
+                NIST Cybersecurity Framework
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="images/Securityweekly.jpg" class="d-block w-100" alt="Security Weekly">
+              <div class="carousel-caption d-none d-md-block text-dark bg-light bg-opacity-75 rounded">
+                Security Weekly — Cybersecurity news & podcasts
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselReading" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselReading" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

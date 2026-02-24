@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sinai's Portfolio</title>
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        </head>
+    
+<body>
+    
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Sinai Hernandez</div>
+    
+            <!-- Hamburger button -->
+            <button class="hamburger" aria-label="Toggle menu">☰</button>
+    
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-toggle">Projects ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Art-portfolio.html">Art Portfolio</a></li>
+                        <li><a href="/cyber-site/index.html">San-Jac Cybersecurity Site</a></li>
+                        <li><a href="fav-list.html">Favorite Lists</a></li>
+                        <li><a href="planner-tables.html">Planner Tables</a></li>
+                        <li><a href="star-bucks.html">Starbucks Clone</a></li>
+                        <li><a href="wishlist.html">My Wishlist</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <h1>Final project</h1>
+    <p>This is a placeholder for the Learn More page content.</p>
+
+    <div>
+        <video muted controls class="project-video" poster="images/display-zoo.jpg">
+            <source src="videos/Parque De Las Leyendas (FINAL PROJECT).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <h3>FINAL PROJECT</h3>
+        <h5>This project requires a local PHP/MySQL environment to run.</h5>
+        <p>A completed PHP and SQL website displaying both the back and front end for 'Parque de las Leyendas'.
+        </p>
+
+        <p>Technologies used: HTML, CSS, JavaScript, PHP, MySQL htgirehgnringdnfg f nipen f in szipengf g; 
+            ibhipgbzdgbngnifzsedgf nsd nvpizdsn f  vs0b  hdwbasd sj bb. 
+        </p>
+    </div>
+    
+</body>
+
+<footer>
+    <p>&copy; 2026 Sinai Hernandez</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+    // Scroll fade background
+    window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = scrollTop / docHeight;
+        const shade = Math.floor(scrollPercent * 255);
+        document.body.style.backgroundColor = `rgb(${shade}, ${shade}, ${shade})`;
+    });
+
+    // Dropdown toggle for mobile
+    document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+        toggle.addEventListener("click", e => {
+            e.preventDefault();
+            const parent = toggle.parentElement;
+            document.querySelectorAll(".dropdown").forEach(drop => {
+                if (drop !== parent) drop.classList.remove("open");
+            });
+            parent.classList.toggle("open");
+        });
+    });
+
+    // Hamburger toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+</script>
+
+</html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinai's Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/2ndlogo.png" alt="Sinai Hernandez logo">
+            </div>
+    
+            <!-- Hamburger button -->
+            <button class="hamburger" aria-label="Toggle menu">☰</button>
+    
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-toggle">Projects ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Art-portfolio.html">Art Portfolio</a></li>
+                        <li><a href="planner-tables.html">Planner Tables</a></li>
+                        <li><a href="/cyber-site/index.html">San-Jac Cybersecurity Site</a></li>
+                        <li><a href="/starbucks-clone/index.html">Starbucks Clone</a></li> 
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#about" class="dropdown-toggle">Lists ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="fav-list.html">Favorite Lists</a></li>
+                        <li><a href="wishlist.html">My Wishlist</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+      
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <video autoplay muted loop class="bg-video">
+            <source src="videos/blackwhite.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-content">
+            <h1>Welcome To Sinai's Portfolio</h1>
+            <p>Designer & developer blending technical rigor with aesthetic design.</p>
+            <a href="#projects" class="cta-btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/pfp-blank.jpg" alt="Photo of Sinai Hernandez">
+            </div>
+    
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>
+                    Hi, I’m Sinai — an IT Web Development student at San Jacinto College who enjoys building
+                    clean, functional web applications from HTML to PHP and SQL. I focus on creating structured,
+                    maintainable layouts and intuitive user experiences.
+                </p>
+                <p>
+                    I’m especially interested in dashboards, modular CSS systems, and backend-driven
+                    websites that prioritize clarity, usability, and scalability.
+                </p>
+
+                <a href="files/Resume.pdf" class="resume-download" target="_blank">
+                    Download Resume PDF</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills + Tech/Learning Layout -->
+    <section class="skills-tech-layout">
+        <!-- Left side -->
+        <div class="left">
+            <section class="skills">
+                <h2>Skills</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>HTML5</h3>
+                        <p>Semantic structure, accessibility</p>
+                    </div>
+                    <div class="card">
+                        <h3>CSS3</h3>
+                        <p>Responsive layouts, modular CSS</p>
+                    </div>
+                    <div class="card">
+                        <h3>PHP</h3>
+                        <p>CRUD, authentication, sessions</p>
+                    </div>
+                    <div class="card">
+                        <h3>MySQL</h3>
+                        <p>Database design & optimization</p>
+                    </div>
+                    <div class="card">
+                        <h3>Git/GitHub</h3>
+                        <p>Version control, collaboration</p>
+                    </div>
+                    <div class="card">
+                        <h3>Responsive Web Design</h3>
+                        <p>Mobile-first approach, media queries</p>
+                </div>
+            </section> 
+        </div>
+    
+        <!-- Right side -->
+        <div class="right">
+            <section class="tech">
+                <h2>Tech Stack</h2>
+                <div class="badge-grid">
+                    <span class="badge"><i class="fab fa-html5"></i> HTML5</span>
+                    <span class="badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span class="badge"><i class="fab fa-js"></i> JavaScript</span>
+                    <span class="badge"><i class="fab fa-php"></i> PHP</span>
+                    <span class="badge"><i class="fas fa-database"></i> MySQL</span>
+                    <span class="badge"><i class="fab fa-git-alt"></i> Git</span>
+                    <span class="badge"><i class="fab fa-github"></i> GitHub</span>
+                </div>
+            </section>
+            
+    
+        <section class="learning">
+            <h2>Currently Learning</h2>
+            
+            <div class="progress">
+                <label>Advanced PHP</label>
+                <div class="progress-bar">
+                    <span style="width:70%"></span>
+                </div>
+            </div>
+              
+            
+            <div class="progress">
+                <label>Database Optimization</label>
+                <div class="progress-bar">
+                    <span style="width:60%"></span>
+                </div>
+            </div>
+            
+            <div class="progress">
+                <label>JavaScript Fundamentals</label>
+                <div class="progress-bar">
+                    <span style="width:40%"></span>
+                </div>
+            </div>
+        </section>
+        </div>
+    </section>
+
+    <section class="professional-skills">
+        <h2>Professional & Additional Skills</h2>
+    
+        <div class="pro-grid">
+            <div class="pro-card">
+                <h3>Languages</h3>
+                <p>English — Fluent</p>
+                <p>Spanish — Fluent</p>
+            </div>
+    
+            <div class="pro-card">
+                <h3>Productivity & Documentation</h3>
+                <p>Microsoft Office Suite (Word, Excel, PowerPoint)</p>
+                <p>Google Docs & Sheets</p>
+                <p>Structured documentation & reports</p>
+            </div>
+            
+    
+            <div class="pro-card">
+                <h3>Work Skills</h3>
+                <p>Technical Documentation</p>
+                <p>Clear Communication</p>
+                <p>Time Management</p>
+            </div>
+        </div>
+    </section>
+    
+      
+              
+    
+
+
+    <!-- Projects Preview -->
+    <section id="projects" class="projects">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+            <!-- Project 1 -->
+            <div class="card">
+                <video muted controls class="project-video" poster="images/display-zoo.jpg">
+                    <source src="videos/Parque De Las Leyendas (FINAL PROJECT).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>FINAL PROJECT</h3>
+                <h5>This project requires a local PHP/MySQL environment to run.</h5>
+                <p>A completed PHP and SQL website displaying both the back and front end for 'Parque de las Leyendas'.
+                </p>
+                <a href="learn-more.html">Learn More</a>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card">
+                <video muted controls class="project-video" poster="images/Gym-display.jpg">
+                    <source src="videos/Gym-Project.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Fitness Club Website</h3>
+                <h5>This project requires a local PHP/MySQL environment to run.</h5>
+                <p>A working PHP and SQL based website with its own database fully functional front end.</p>
+                <a href="learn-more-2.html">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    
+      
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sinai Hernandez</p>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
+            <a href="#">X</a>
+            <a href="https://github.com/BloomingMidnightlight">GitHub</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Scroll fade background
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = scrollTop / docHeight;
+            const shade = Math.floor(scrollPercent * 255);
+            document.body.style.backgroundColor = `rgb(${shade}, ${shade}, ${shade})`;
+        });
+
+        // Dropdown toggle for mobile
+        document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+            toggle.addEventListener("click", e => {
+                e.preventDefault();
+                const parent = toggle.parentElement;
+                document.querySelectorAll(".dropdown").forEach(drop => {
+                    if (drop !== parent) drop.classList.remove("open");
+                });
+                parent.classList.toggle("open");
+            });
+        });
+
+        // Hamburger toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+    </script>
+
+</body>
+
+</html>

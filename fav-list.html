@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinai's Portfolio</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/2ndlogo.png" alt="Sinai Hernandez logo">
+            </div>
+    
+            <!-- Hamburger button -->
+            <button class="hamburger" aria-label="Toggle menu">☰</button>
+    
+            <ul class="nav-links">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#projects" class="dropdown-toggle">Projects ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Art-portfolio.html">Art Portfolio</a></li>
+                        <li><a href="/cyber-site/index.html">San-Jac Cybersecurity Site</a></li>
+                        <li><a href="fav-list.html">Favorite Lists</a></li>
+                        <li><a href="planner-tables.html">Planner Tables</a></li>
+                        <li><a href="star-bucks.html">Starbucks Clone</a></li>
+                        <li><a href="wishlist.html">My Wishlist</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Top 5 Songs/Albums (Ranked)</h2>
+            <ol>
+                <li><a href="https://music.youtube.com/search?q=Может+просто+17+SEVENTEEN" target="_blank">Может просто by 17 SEVENTEEN</a></li>
+                <li><a href="https://music.youtube.com/search?q=ragdoll+vana" target="_blank">ragdoll by vana</a></li>
+                <li><a href="https://music.youtube.com/search?q=all+i+wanted+paramore" target="_blank">All I Wanted Was You by Paramore</a></li>
+                <li><a href="https://music.youtube.com/search?q=King+for+a+Day+by+Pierce+the+Veil" target="_blank">King for a Day by Pierce the Veil</a></li>
+                <li><a href="https://music.youtube.com/search?q=SPIT+IN+MY+FACE!+by+ThxSoMch" target="_blank">SPIT IN MY FACE! by ThxSoMch</a></li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Top 5 Video Games (Unordered)</h2>
+            <ul>
+                <li><a href="https://www.minecraft.net/" target="_blank">Minecraft</a></li>
+                <li><a href="https://webfishing.net/" target="_blank">Webfishing</a></li>
+                <li><a href="https://thatsnotmyneighbor.org/" target="_blank">That's Not My Neighbor</a></li>
+                <li><a href="https://www.roblox.com/" target="_blank">Roblox</a></li>
+                <li><a href="https://www.stardewvalley.net/" target="_blank">Stardew Valley</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sinai Hernandez</p>
+        <div class="socials">
+            <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
+            <a href="#">X</a>
+            <a href="https://github.com/BloomingMidnightlight">GitHub</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Scroll fade background
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.body.scrollHeight - window.innerHeight;
+            const scrollPercent = scrollTop / docHeight;
+            const shade = Math.floor(scrollPercent * 255);
+            document.body.style.backgroundColor = `rgb(${shade}, ${shade}, ${shade})`;
+        });
+
+        // Dropdown toggle for mobile
+        document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
+            toggle.addEventListener("click", e => {
+                e.preventDefault();
+                const parent = toggle.parentElement;
+                document.querySelectorAll(".dropdown").forEach(drop => {
+                    if (drop !== parent) drop.classList.remove("open");
+                });
+                parent.classList.toggle("open");
+            });
+        });
+
+        // Hamburger toggle
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+    </script>
+
+
+</body>
+
+</html>
