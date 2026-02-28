@@ -211,6 +211,7 @@ body::before {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    pointer-events: none;
     filter: grayscale(100%) contrast(120%);
 }
 
@@ -1218,4 +1219,5 @@ form .reset-btn {
     }
 
 }
+
 
