@@ -16,10 +16,11 @@ function toggleCart() {
     }
 }
 
-// UPDATE: added 'qty' as a third parameter
+// UPDATE: We added 'qty' as a third parameter
 function addToCart(name, price, qty = 1, description = "") {
 
     const singleItemPrice = parseFloat(price) / qty;
+    // 1. Check if the item already exists in the cart
     const existingItem = cart.find(item =>
         item.name === name &&
         item.price === singleItemPrice &&
@@ -28,7 +29,7 @@ function addToCart(name, price, qty = 1, description = "") {
 
     if (existingItem) {
         existingItem.quantity += qty;
-
+        
     } else {
         cart.push({
             name: name,
@@ -49,6 +50,7 @@ function updateCart() {
     const container = document.getElementById('cart-items-container');
     const countLabel = document.getElementById('cart-count');
     const totalLabel = document.getElementById('cart-total-amount');
+    const checkoutBtn = document.getElementById('checkout-btn');
 
     if (!container) return;
 
@@ -58,7 +60,9 @@ function updateCart() {
 
     if (cart.length === 0) {
         container.innerHTML = '<p style="text-align:center; padding: 20px; color: #888;">Your cart is empty!</p>';
+        if (checkoutBtn) checkoutBtn.style.display = 'none';
     } else {
+        if (checkoutBtn) checkoutBtn.style.display = 'block';
         cart.forEach(item => {
 
             const rowTotal = item.price * item.quantity;
@@ -124,6 +128,11 @@ function openCheckout() {
         return;
     }
 
+    if (cart.length === 0) {
+        alert("Your cart is empty! Please add items before checking out.");
+        return;
+    }
+
     orderSummary.innerHTML = '';
     let grandTotal = 0;
 
@@ -150,7 +159,7 @@ function openCheckout() {
     `;
 
     checkoutModal.classList.add('show');
-
+    
     // Close the cart sidebar so it's not in the way
     const sidebar = document.getElementById('cart-sidebar');
     if (sidebar) sidebar.classList.remove('active');
@@ -164,33 +173,33 @@ function closeCheckout() {
 //MIGHT NEED TO DELETE
 const paymentForm = document.getElementById('payment-form');
 if (paymentForm) {
-    paymentForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+  paymentForm.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-        const name = document.getElementById('cust-name').value;
-        const method = document.getElementById('pay-method').value;
-        const date = document.getElementById('order-date').value;
+      const name = document.getElementById('cust-name').value;
+      const method = document.getElementById('pay-method').value;
+      const date = document.getElementById('order-date').value;
 
-        // Generate random order number
-        const orderNum = 'QB' + Math.floor(Math.random() * 100000);
-        const displaySpan = document.getElementById('display-order-num');
-        if (displaySpan) displaySpan.textContent = orderNum;
+      // Generate random order number
+      const orderNum = 'QB' + Math.floor(Math.random() * 100000);
+      const displaySpan = document.getElementById('display-order-num');
+      if(displaySpan) displaySpan.textContent = orderNum;
 
-        // Save order to localStorage
-        localStorage.setItem('qb-lastOrderNum', orderNum);
+      // Save order to localStorage
+      localStorage.setItem('qb-lastOrderNum', orderNum);
 
-        // Empty cart
-        cart = [];
-        updateCart();
-        closeCheckout();
-        paymentForm.reset();
+      // Empty cart
+      cart = [];
+      updateCart(); 
+      closeCheckout(); 
+      paymentForm.reset(); 
 
-        // Open Success Modal
-        const successModal = document.getElementById('success-modal');
-        if (successModal) {
-            successModal.classList.add('show');
-        }
-    });
+      // Open Success Modal
+      const successModal = document.getElementById('success-modal');
+      if(successModal) {
+          successModal.classList.add('show');
+      }
+  });
 }
 
 function closeSuccess() {
@@ -274,7 +283,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //SCANNER//
     function getSelectedOptionsText() {
-
+    
         if (!optionsContainer) return "";
 
         let selected = [];
@@ -286,7 +295,7 @@ document.addEventListener("DOMContentLoaded", () => {
             selected.push(labelText);
         });
 
-        // Grabs selected flavor from dropdowns
+        // Grabs the selected flavor from dropdowns
         const selects = optionsContainer.querySelectorAll('select');
         selects.forEach(select => {
             if (select.value) selected.push(select.value);
@@ -323,10 +332,11 @@ document.addEventListener("DOMContentLoaded", () => {
     function updatePrice() {
         let extras = 0;
 
-        //Scans checked boxes/radios
+        // 1. Scan for all checked boxes/radios
         const selectedOptions = optionsContainer.querySelectorAll('input:checked');
 
         selectedOptions.forEach(opt => {
+            // 2. Look for the "+$X.XX" pattern in the label text
             const labelText = opt.parentElement.textContent;
             const match = labelText.match(/\+\$([0-9.]+)/);
             if (match) {
@@ -334,10 +344,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        //Add extras to the base price of the item
+        // 3. Add those extras to the base price of the item
         currentPrice = basePrice + extras;
 
-        //Multiply by quantity and update the button text
+        // 4. Multiply by quantity and update the button text
         const total = (currentPrice * quantity).toFixed(2);
         modalAddBtn.textContent = `Add to Cart - $${total}`;
     }
@@ -381,7 +391,7 @@ document.addEventListener("DOMContentLoaded", () => {
             modalImage.src = img;
             modalName.textContent = name;
 
-
+            
             // Build Options based on type
             renderOptions(type);
 
@@ -414,21 +424,21 @@ document.addEventListener("DOMContentLoaded", () => {
                         </select>
                     </div>`;
                 limitSides(2);
-                break;
+            break;
 
             case "sandwich":
                 optionsContainer.innerHTML = `
                     <label><input type="checkbox"> Extra Meat (+$3)</label>
                     <label><input type="checkbox"> BBQ Sauce (+$1)</label>
                     <label><input type="checkbox"> Jalapeños (+$0.50)</label>`;
-                break;
+            break;
 
             case "potato-plain":
                 optionsContainer.innerHTML = `
                         <label><input type="checkbox"> Cheese (+$1)</label>
                         <label><input type="checkbox"> Bacon (+$2)</label>
                     `;
-                break;
+            break;
 
 
             case "potato-loaded1":
@@ -438,7 +448,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <label><input type="checkbox"> Extra chili Sauce (+$1)</label>
                         <label><input type="checkbox"> Jalapeños (+$0.50)</label>
                     `;
-                break;
+            break;   
 
             case "potato-loaded2":
                 optionsContainer.innerHTML = `
@@ -448,7 +458,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <label><input type="checkbox"> Add Sour Cream (+$0.75)</label>
                         <label><input type="checkbox"> Jalapeños (+$0.50)</label>
                     `;
-                break;
+            break;
 
             case "potato-loaded3":
                 optionsContainer.innerHTML = `
@@ -458,7 +468,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <label><input type="checkbox"> Extra Sour Cream (+$0.75)</label>
                         <label><input type="checkbox"> Jalapeños (+$0.50)</label>
                     `;
-                break;
+            break;
 
             case "potato-simple":
                 optionsContainer.innerHTML = `
@@ -466,7 +476,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <label><input type="checkbox"> Add Butter (+$0.50)</label>
                         <label><input type="checkbox"> Extra Meat (+$0.25)</label>
                     `;
-                break;
+            break;
 
             //SIDES//
 
@@ -476,7 +486,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <label><input type="radio" name="size"> Medium (+$1)</label>
                         <label><input type="radio" name="size"> Large (+$2)</label>
                     `;
-                break;
+            break;
 
             case "veggies":
                 optionsContainer.innerHTML = `
@@ -487,7 +497,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         <label><input type="checkbox"> Add Butter</label>
                         <label><input type="checkbox"> Add Seasoning</label>
                     `;
-                break;
+            break;
 
             //DESSERTS//
 
@@ -495,7 +505,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 optionsContainer.innerHTML = `
                         <label><input type="checkbox"> Add Ice Cream (+$1.50)</label>
                     `;
-                break;
+            break;  
 
             case "cold-dessert":
                 optionsContainer.innerHTML = `
@@ -508,13 +518,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         <label><input type="radio" name="size"> Single Scoop</label>
                         <label><input type="radio" name="size"> Double Scoop (+$1)</label>
                     `;
-                break;
+            break;
 
             case "dessert":
                 optionsContainer.innerHTML = `
                     <p>A delicious peacan pie slice, perfect for that sweet spot</p>
                 `;
-                break;
+            break;
 
 
             //DRINKS//
@@ -525,7 +535,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <label><input type="radio" name="size"> Medium (+$0.50)</label>
                     <label><input type="radio" name="size"> Large (+$1)</label>
                 `;
-                break;
+            break;
 
             case "drink-fountain":
                 optionsContainer.innerHTML = `
@@ -602,22 +612,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // --- ADD TO CART LOGIC ---
     modalAddBtn.addEventListener("click", () => {
         const itemName = modalName.textContent;
-        //use the total calculated price (price * quantity)
+        // We use the total calculated price (price * quantity)
         const itemTotalPrice = parseFloat(currentPrice * quantity);
 
         const itemDescription = getSelectedOptionsText();
 
-        // Call the cart function (Make sure this function is defined in script!)
+        // 1. Call the cart function (Make sure this function is defined in your script!)
         if (typeof addToCart === "function") {
             addToCart(itemName, itemTotalPrice, quantity, itemDescription);
         }
 
-        // Provide feedback (Vibration Requirement)
+        // 2. Provide feedback (Part 2: Vibration Requirement)
         if (navigator.vibrate) {
             navigator.vibrate(50);
         }
 
-        // Save "Last Added" to LocalStorage (Requirement)
+        // 3. Save "Last Added" to LocalStorage (Part 3: Requirement)
         localStorage.setItem('lastItemAdded', itemName);
 
         // 4. Close the modal and open the cart sidebar
