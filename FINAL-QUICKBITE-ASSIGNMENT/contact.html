@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite BBQ</title>
+    <link rel="stylesheet" href="css/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <header>
+        <div class="nav-container">
+            <h1 class="logo">
+                QuickBite
+                <span>Smoked BAR-B-QUE</span>
+            </h1>
+
+            <nav id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html" class="active">Locations & Hours</a>
+            </nav>
+
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+
+        </div>
+    </header>
+
+    <main class="contact">
+        <section class="contact-page">
+
+            <section class="contact-banner">
+                <p class="subtitle-contact">COME FIND US</p>
+                <h1>LOCATION & HOURS</h1>
+            </section>
+
+            <div class="contact-container">
+
+                <!-- LEFT SIDE -->
+                <div class="contact-left">
+
+                    <h1>LOCATED</h1>
+                    <!-- MAP -->
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps?q=Houston,TX&output=embed" loading="lazy">
+                        </iframe>
+                    </div>
+
+                    <button onclick="getDirections()">Get Directions</button>
+
+                    <!-- CONTACT FORM -->
+                    <div class="contact-form">
+                        <h3>Send Us a Message</h3>
+
+                        <input type="text" placeholder="Your Name">
+                        <input type="email" placeholder="Your Email">
+                        <textarea placeholder="Your Message"></textarea>
+
+                        <button>Send Message</button>
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="contact-right">
+
+                    <h2 class="location-title">
+                        <span class="icon">
+                            <!-- MAP PIN ICON -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin">
+                                <path
+                                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </span>
+
+                        Location & Hours
+                    </h2>
+
+                    <p class="address">
+                        123 BBQ Street, Food City, FC 1234<br>
+                        Houston, TX
+                    </p>
+
+                    <div class="services">
+                        <h4>Services</h4>
+                        <div class="service-tags">
+                            <span>Dine-in</span>
+                            <span>Takeout</span>
+                            <span>Lunch</span>
+                            <span>Dinner</span>
+                        </div>
+                    </div>
+
+                    <div class="phone">
+
+                        <h2 class="phone-title">
+                            <span class="icon">
+                                <!-- MAP PIN ICON -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone">
+                                    <path
+                                        d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                                </svg>
+                            </span>
+                            Phone
+                        </h2>
+
+                        <p>(000) 123-4567</p>
+
+                        <span>Call to place your order</span>
+                    </div>
+
+                    <div class="hours">
+                        <h2 class="hours-title">
+                            <span class="icon">
+                                <!-- MAP PIN ICON -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-clock-icon lucide-clock">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 6v6l4 2" />
+                                </svg>
+                            </span>
+                            Hours
+                        </h2>
+                        <ul id="hoursList">
+                            <li data-day="0">Sunday: 11AM – 8PM</li>
+                            <li data-day="1">Monday: 11AM – 9PM</li>
+                            <li data-day="2">Tuesday: 11AM – 9PM</li>
+                            <li data-day="3">Wednesday: 11AM – 9PM</li>
+                            <li data-day="4">Thursday: 11AM – 9PM</li>
+                            <li data-day="5">Friday: 11AM – 10PM</li>
+                            <li data-day="6">Saturday: 11AM – 10PM</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+                <h2>QuickBite BBQ</h2>
+                <p>Smoked low & slow, served fresh daily.</p>
+            </div>
+
+            <!-- FIND US -->
+            <div class="footer-section">
+                <h3>Find Us</h3>
+                <p>123 BBQ Street, Food City, FC 12345</p>
+                <a href="contact.html">Get Directions</a>
+            </div>
+
+            <!-- LINKS -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">info</a>
+            </div>
+
+            <!-- HOURS -->
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Mon–Sun</p>
+                <p>11:00 AM – 9:00 PM</p>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>(000) 123-4567</p>
+                <p>info@quickbitebbq.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 QuickBite BBQ.SH. All rights reserved.</p>
+        </div>
+
+    </footer>
+
+    <script src="js/about.js"></script>
+
+
+
+</body>
+
+</html>
