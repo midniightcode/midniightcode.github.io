@@ -8,22 +8,24 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 
 <body>
-
+    <div id="particles-js" style="position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: 100%;"></div>
     <!-- Header -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="images/2ndlogo.png" alt="Sinai Hernandez logo">
+                <a href="index.html">
+                    <img src="images/portfolio-logo-RM.png" alt="Sinai Hernandez logo">
+                </a>
             </div>
-    
+
             <!-- Hamburger button -->
             <button class="hamburger" aria-label="Toggle menu">☰</button>
-    
+
             <ul class="nav-links">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="dropdown">
@@ -37,7 +39,7 @@
                     </ul>
                 </li>
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" style="color: var(--accent);">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -89,16 +91,16 @@
                 <div class="rating-group">
                     <input type="radio" id="rate1" name="rating" value="1">
                     <label for="rate1">1</label>
-                
+
                     <input type="radio" id="rate2" name="rating" value="2">
                     <label for="rate2">2</label>
-                
+
                     <input type="radio" id="rate3" name="rating" value="3">
                     <label for="rate3">3</label>
-                
+
                     <input type="radio" id="rate4" name="rating" value="4">
                     <label for="rate4">4</label>
-                
+
                     <input type="radio" id="rate5" name="rating" value="5">
                     <label for="rate5">5</label>
                 </div>
@@ -113,49 +115,19 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Sinai Hernandez</p>
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
-            <a href="#">X</a>
-            <a href="https://github.com/BloomingMidnightlight">GitHub</a>
+        <div class="footer-content">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
+                <a href="https://github.com/midniightcode">GitHub</a>
+            </div>
+            <p class="footer-copy">@midniightcode • UX/UI Developer & Web Designer/Developer</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        // Scroll fade background
-        window.addEventListener("scroll", () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercent = scrollTop / docHeight;
-            const shade = Math.floor(scrollPercent * 255);
-            document.body.style.backgroundColor = `rgb(${shade}, ${shade}, ${shade})`;
-        });
-
-        // Dropdown toggle for mobile
-        document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
-            toggle.addEventListener("click", e => {
-                e.preventDefault();
-                const parent = toggle.parentElement;
-                document.querySelectorAll(".dropdown").forEach(drop => {
-                    if (drop !== parent) drop.classList.remove("open");
-                });
-                parent.classList.toggle("open");
-            });
-        });
-
-        // Hamburger toggle
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("show");
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 
 
 </html>
-
