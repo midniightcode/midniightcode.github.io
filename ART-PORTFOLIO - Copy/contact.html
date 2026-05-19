@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch for collaborations, projects, or commissions. Contact Sinai Hernandez via form or social media.">
+    <title>Portfolio | Contact</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+
+<body>
+    <!-- NAVIGATION -->
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <a href="index.html"><img src="images/portfolio-logo-RM.png" alt="Logo"></a>
+            </div>
+            <div class="menu-toggle">☰</div>
+            <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="projects.html">PROJECTS</a>
+                <div class="dropdown active">
+                    <a href="#" style="color: var(--accent);">MORE ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about.html">ABOUT</a>
+                        <a href="contact.html" style="color: var(--accent);">CONTACT</a>
+                        <a href="FAQ.html">Q&A</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+    <div id="particles-js" style="position: fixed; z-index: -1;"></div>
+
+    <section class="section-padding" style="margin-top: 80px;">
+        <h1 class="section-title">Get In Touch</h1>
+
+        <div class="contact-container">
+            <div>
+                <p class="text-content">
+                    Want to reach out, be for a collab or work? I'm just a text away!
+                    Whether you have a specific project in mind or just want to connect, feel free to drop a message.
+                </p>
+
+                <div style="margin-top: 50px;">
+                    <h3 style="font-weight: 400; margin-bottom: 20px;">My Art Socials</h3>
+                    <div class="socials">
+                        <a href="https://www.instagram.com/dark_midnightlight/" class="btn"
+                            style="margin-bottom: 10px;">Instagram</a>
+                        <a href="https://www.artstation.com/dark_midnightlight3/profile" class="btn"
+                            style="margin-bottom: 10px;">ArtStation</a>
+                        <a href="#" class="btn" style="margin-bottom: 10px;">Twitter / X</a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <form action="https://formspree.io/f/mnjbaqwv" method="POST" class="contact-form">
+                    <div>
+                        <label for="name" style="margin-bottom: 5px; display: block; color: var(--text-muted);">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div>
+                        <label for="email" style="margin-bottom: 5px; display: block; color: var(--text-muted);">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="message" style="margin-bottom: 5px; display: block; color: var(--text-muted);">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+
+                    <!-- optional but nice -->
+                    <input type="hidden" name="_subject" value="New message from portfolio site">
+
+                    <button type="submit" class="btn" style="width: fit-content; font-family: var(--font-main); margin: 0 auto;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/dark_midnightlight/">Instagram</a>
+                <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
+                <a href="https://github.com/midniightcode">GitHub</a>
+            </div>
+            <p class="footer-copy">@midniightcode • UX/UI Developer & Digital Artist</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

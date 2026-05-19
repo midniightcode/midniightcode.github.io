@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Personal portfolio of Sinai Hernandez, a UX/UI Developer and Digital Artist showcasing digital art, web development projects, and UI/UX design.">
+    <title>Portfolio | Home</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="nav">
+            <div class="logo">
+                <!-- Using actual logo image -->
+                <a href="index.html"><img src="images/portfolio-logo-RM.png" alt="Logo"></a>
+            </div>
+
+            <div class="menu-toggle">☰</div>
+
+            <nav class="nav-links">
+                <a href="index.html">HOME</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="projects.html">PROJECTS</a>
+                <div class="dropdown">
+                    <a href="#">MORE ▾</a>
+                    <div class="dropdown-content">
+                        <a href="about.html">ABOUT</a>
+                        <a href="contact.html">CONTACT</a>
+                        <a href="FAQ.html">Q&A</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div id="particles-js"></div>
+
+            <div class="hero-content">
+                <h1 class="title">
+                    <span>P</span><span>O</span><span>R</span><span>T</span><span>F</span><span>O</span><span>L</span><span>I</span><span>O</span>
+                </h1>
+                <div class="hero-subtitle-container">
+                    <span class="name-subtitle">Sinai Hernandez</span>
+                    <span class="role-subtitle">UX/UI Developer and Digital Artist</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRO SECTION -->
+        <section class="intro-section">
+            <h2>Welcome to My Creative Space</h2>
+            <p class="text-content">
+                I create immersive digital experiences by merging artistic vision with clean, functional UI/UX design.
+                Explore my artwork and web development projects below.
+            </p>
+        </section>
+
+        <!-- GALLERY PREVIEW -->
+        <section class="section-padding" style="padding-top: 0;">
+            <h2 class="section-title">Gallery</h2>
+            <p class="text-content">
+                An art gallery showcasing a curated selection of my digital art pieces. I specialize in vibrant,
+                expressive
+                illustrations.
+            </p>
+
+            <div class="gallery-preview-carousel">
+                <div class="preview-item" style="background-image: url('images/3rd-art.jpg');"></div>
+                <div class="preview-item" style="background-image: url('images/4th-art.jpg');"></div>
+                <div class="preview-item" style="background-image: url('images/6th-art.jpg');"></div>
+            </div>
+
+            <a href="gallery.html" class="btn">View Gallery</a>
+        </section>
+
+        <!-- PROJECTS PREVIEW -->
+        <section class="section-padding" style="padding-top: 0;">
+            <h2 class="section-title">Projects</h2>
+            <p class="text-content">
+                My work in UI/UX design and web development. Bridging the gap between beautiful aesthetics and intuitive
+                user experiences.
+            </p>
+
+            <div class="home-projects-grid">
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('images/website-cover-2.jpg');"></div>
+                    <div class="project-info">
+                        <h3>UI/UX Redesign</h3>
+                        <p>A conceptual redesign focusing on user accessibility involving php and back-end development.
+                        </p>
+                        <a href="https://midniightcode.github.io/#projects" class="btn">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img" style="background-image: url('images/website-cover.jpg');"></div>
+                    <div class="project-info">
+                        <h3>Web App Interface</h3>
+                        <p>Front-end development and design system implementation for a modern web application.</p>
+                        <a href="https://midniightcode.github.io/FINAL-QUICKBITE-ASSIGNMENT/index.html" class="btn">View
+                            Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERESTED? / CTA -->
+        <section class="cta-section">
+            <div class="section-padding">
+                <h2>Interested in working together?</h2>
+                <p class="text-content" style="margin: 0 auto 30px auto;">
+                    Whether it's a web development project, a UI/UX consultation, or a custom digital art commission,
+                    I'm
+                    always open to new opportunities.
+                </p>
+                <a href="contact.html" class="btn">Contact Me</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-socials">
+                <a href="https://www.instagram.com/dark_midnightlight/">Instagram</a>
+                <a href="https://www.artstation.com/dark_midnightlight3/profile">ArtStation</a>
+                <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
+                <a href="https://github.com/midniightcode">GitHub</a>
+            </div>
+            <p class="footer-copy">@midniightcode • UX/UI Developer & Digital Artist</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
