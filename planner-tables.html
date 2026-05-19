@@ -4,34 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinai's Portfolio</title>
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Sinai's Portfolio | Planner Tables</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 
 <body>
+    <!-- NAVIGATION -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="images/2ndlogo.png" alt="Sinai Hernandez logo">
+                <a href="index.html">
+                    <img src="images/portfolio-logo-RM.png" alt="Sinai Hernandez logo">
+                </a>
             </div>
-    
+
             <!-- Hamburger button -->
             <button class="hamburger" aria-label="Toggle menu">☰</button>
-    
+
             <ul class="nav-links">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
-                    <a href="#projects" class="dropdown-toggle">Projects ▾</a>
+                    <a href="#projects" class="dropdown-toggle" style="color: var(--accent);">Projects ▾</a>
                     <ul class="dropdown-menu">
                         <li><a href="Art-portfolio.html">Art Portfolio</a></li>
                         <li><a href="/FINAL-QUICKBITE-ASSIGNMENT/index.html">BBQ Restaurant</a></li>
                         <li><a href="/cyber-site/index.html">San-Jac Cybersecurity Site</a></li>
                         <li><a href="/starbucks-clone/index.html">Starbucks Clone</a></li>
-                        <li><a href="planner-tables.html">Planner Tables</a></li>
+                        <li><a href="planner-tables.html" style="color: var(--accent);">Planner Tables</a></li>
                     </ul>
                 </li>
                 <li><a href="index.html#about">About</a></li>
@@ -41,139 +44,96 @@
     </header>
 
     <main>
-        <div class="planner-grid">
+        <div id="particles-js" style="position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: 100%;"></div>
 
-            <div class="table-container">
-            <table>
-                <caption>Cybersecurity Club Website Weekly Schedule</caption>
-                <!-- Table 1: Weekly Schedule -->
-                <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>9–11 AM</th>
-                        <th>11–1 PM</th>
-                        <th>1–3 PM</th>
-                        <th>3–5 PM</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>Wireframe Design</td>
-                        <td colspan="2">Club Page Layout in Figma</td>
-                        <td>HTML Structure Review</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>Accessibility Audit</td>
-                        <td>Navigation Testing</td>
-                        <td>CSS Styling</td>
-                        <td>Backup Strategy Setup</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td colspan="4">Extended Coding Session (Forms, PHP, and Validation)</td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>Security Tips Section</td>
-                        <td>Image Optimization</td>
-                        <td>Peer Feedback</td>
-                        <td>GitHub Sync</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        <section class="roadmap-section">
+            <div class="roadmap-header-container">
+                <h1 class="roadmap-main-title">Portfolio Redesign Roadmap</h1>
+                <p class="roadmap-subtitle">Project timelines and weekly execution plan</p>
+            </div>
 
-        <div class="table-container table-two">
-            <table>
-                <caption>Cybersecurity Website Project Tasks</caption>
-                <!-- Table 2: Multi-Day Task List -->
-                <thead>
-                    <tr>
-                        <th>Task</th>
-                        <th>Day</th>
-                        <th>Details</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td rowspan="3">Homepage Development</td>
-                        <td>Monday</td>
-                        <td>Wireframe and Layout Planning</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>Semantic HTML Implementation</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>Accessibility and Mobile Responsiveness</td>
-                    </tr>
-                    <tr>
-                        <td>Security Resources Page</td>
-                        <td>Thursday</td>
-                        <td>Content Draft and External Link Integration</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="2">Testing & Deployment</td>
-                        <td>Friday</td>
-                        <td>Cross-Browser Testing</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td>Final Deployment to Club Server</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+            <div class="roadmap-container">
+                <!-- Weekly Schedule Card -->
+                <div class="glass-card">
+                    <h2 class="glass-card-title">Weekly Execution Schedule</h2>
+                    <div class="roadmap-grid weekly-grid">
+                        <div class="rg-header">Day</div>
+                        <div class="rg-header">Morning Focus</div>
+                        <div class="rg-header">Afternoon Focus</div>
+                        <div class="rg-header">Evening Focus</div>
+
+                        <div class="rg-cell rg-label">Monday</div>
+                        <div class="rg-cell"><span class="mobile-label">Morning Focus: </span>UI Layout Auditing</div>
+                        <div class="rg-cell"><span class="mobile-label">Afternoon Focus: </span>Typography & Branding</div>
+                        <div class="rg-cell"><span class="mobile-label">Evening Focus: </span>Glassmorphism Setup</div>
+
+                        <div class="rg-cell rg-label">Tuesday</div>
+                        <div class="rg-cell"><span class="mobile-label">Morning Focus: </span>Mobile Responsive Fixes</div>
+                        <div class="rg-cell"><span class="mobile-label">Afternoon Focus: </span>Navigation Polish</div>
+                        <div class="rg-cell"><span class="mobile-label">Evening Focus: </span>Micro-Animations</div>
+
+                        <div class="rg-cell rg-label">Wednesday</div>
+                        <div class="rg-cell rg-full-span"><span class="mobile-label">All Day: </span>Global Design System & Consistency Review</div>
+
+                        <div class="rg-cell rg-label">Thursday</div>
+                        <div class="rg-cell"><span class="mobile-label">Morning Focus: </span>Form Enhancements</div>
+                        <div class="rg-cell"><span class="mobile-label">Afternoon Focus: </span>Cross-Browser Testing</div>
+                        <div class="rg-cell"><span class="mobile-label">Evening Focus: </span>Production Deployment</div>
+                    </div>
+                </div>
+
+                <!-- Project Phases Card -->
+                <div class="glass-card">
+                    <h2 class="glass-card-title">Project Phases & Objectives</h2>
+                    <div class="roadmap-grid phases-grid">
+                        <div class="rg-header">Phase</div>
+                        <div class="rg-header">Day</div>
+                        <div class="rg-header">Core Focus</div>
+
+                        <!-- Phase 1 -->
+                        <div class="rg-cell rg-label rg-phase-1">Visual Modernization</div>
+                        <div class="rg-cell"><span class="mobile-label">Day: </span>Monday</div>
+                        <div class="rg-cell"><span class="mobile-label">Focus: </span>Grid refactoring and typography alignment</div>
+
+                        <div class="rg-cell rg-hide-mobile"></div>
+                        <div class="rg-cell"><span class="mobile-label">Day: </span>Tuesday</div>
+                        <div class="rg-cell"><span class="mobile-label">Focus: </span>Glassmorphism integration across cards</div>
+
+                        <div class="rg-cell rg-hide-mobile"></div>
+                        <div class="rg-cell"><span class="mobile-label">Day: </span>Wednesday</div>
+                        <div class="rg-cell"><span class="mobile-label">Focus: </span>Neon accents and gradient implementation</div>
+
+                        <!-- Phase 2 -->
+                        <div class="rg-cell rg-label rg-phase-2">Responsiveness</div>
+                        <div class="rg-cell"><span class="mobile-label">Day: </span>Thursday</div>
+                        <div class="rg-cell"><span class="mobile-label">Focus: </span>Mobile media queries and header adjustments</div>
+
+                        <!-- Phase 3 -->
+                        <div class="rg-cell rg-label rg-phase-3">Final Polish</div>
+                        <div class="rg-cell"><span class="mobile-label">Day: </span>Friday</div>
+                        <div class="rg-cell"><span class="mobile-label">Focus: </span>Interactive hover states and scroll animations</div>
+
+                        <div class="rg-cell rg-hide-mobile"></div>
+                        <div class="rg-cell"><span class="mobile-label">Day: </span>Saturday</div>
+                        <div class="rg-cell"><span class="mobile-label">Focus: </span>Cross-browser testing and final push</div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Sinai Hernandez</p>
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
-            <a href="#">X</a>
-            <a href="https://github.com/BloomingMidnightlight">GitHub</a>
+        <div class="footer-content">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
+                <a href="https://github.com/midniightcode">GitHub</a>
+            </div>
+            <p class="footer-copy">@midniightcode • UX/UI Developer & Web Designer/Developer</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        // Scroll fade background
-        window.addEventListener("scroll", () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercent = scrollTop / docHeight;
-            const shade = Math.floor(scrollPercent * 255);
-            document.body.style.backgroundColor = `rgb(${shade}, ${shade}, ${shade})`;
-        });
-
-        // Dropdown toggle for mobile
-        document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
-            toggle.addEventListener("click", e => {
-                e.preventDefault();
-                const parent = toggle.parentElement;
-                document.querySelectorAll(".dropdown").forEach(drop => {
-                    if (drop !== parent) drop.classList.remove("open");
-                });
-                parent.classList.toggle("open");
-            });
-        });
-
-        // Hamburger toggle
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("show");
-        });
-    </script>
-
+    <script src="js/scripts.js"></script>
 </body>
 
-
 </html>
-
