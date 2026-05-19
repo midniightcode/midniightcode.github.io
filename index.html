@@ -8,24 +8,26 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap"rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 
 <body>
-
+    <div id="particles-js" style="position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: 100%;"></div>
     <!-- Header -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <img src="images/2ndlogo.png" alt="Sinai Hernandez logo">
+                <a href="index.html">
+                    <img src="images/portfolio-logo-RM.png" alt="Sinai Hernandez logo">
+                </a>
             </div>
-    
+
             <!-- Hamburger button -->
             <button class="hamburger" aria-label="Toggle menu">☰</button>
-    
+
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" style="color: var(--accent);">Home</a></li>
                 <li class="dropdown">
                     <a href="#projects" class="dropdown-toggle">Projects ▾</a>
                     <ul class="dropdown-menu">
@@ -40,46 +42,57 @@
             </ul>
         </nav>
     </header>
-      
+
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <video autoplay muted loop playsinline webkit-playsinline class="bg-video">
-            <source src="videos/blackwhite.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="hero-content">
-            <h1>Welcome To Sinai's Portfolio</h1>
-            <p>Designer & developer blending technical rigor with aesthetic design.</p>
-            <a href="#projects" class="cta-btn">View My Work</a>
+        <div class="hero-content hero-new-layout">
+            <div class="title-left">
+                <h1 class="main-title">Web Developer</h1>
+                <h2 class="sub-title">Portfolio</h2>
+                <a href="#projects" class="cta-btn" style="margin-top: 2rem;">View My Work</a>
+            </div>
+            <div class="title-right">
+                <span class="side-title">UI / UX</span>
+            </div>
         </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="intro-section">
+        <h2>Welcome to my Web Development Portfolio</h2>
+        <p class="text-content">
+            Step into my workspace where logic meets creativity. Here you'll find a collection of my web applications,
+            frontend designs, and technical projects.
+        </p>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="images/pfp-blank.jpg" alt="Photo of Sinai Hernandez">
+    <section id="about" class="about-modern">
+        <div class="about-left">
+            <h2>About Me</h2>
+            <div class="about-image-new">
+                <img src="../profile.jpg" alt="Photo of Sinai Hernandez">
             </div>
-    
-            <div class="about-content">
-                <h2>About Me</h2>
-                <p>
-                    Hi, I’m Sinai — an IT Web Development student at San Jacinto College who enjoys building
-                    clean, functional web applications from HTML to PHP and SQL. I focus on creating structured,
-                    maintainable layouts and intuitive user experiences.
-                </p>
-                <p>
-                    I’m especially interested in dashboards, modular CSS systems, and backend-driven
-                    websites that prioritize clarity, usability, and scalability.
-                </p>
+        </div>
 
-                <a href="files/Resume.pdf" class="resume-download" target="_blank">
-                    Download Resume PDF</a>
+        <div class="about-right">
+            <p>
+                Hi, I’m Sinai — an IT Web Development graduate from San Jacinto College who enjoys building
+                clean, functional web applications from HTML to PHP and SQL. I focus on creating structured,
+                maintainable layouts and intuitive user experiences.
+            </p>
+            <p>
+                I’m especially interested in dashboards, modular CSS systems, and backend-driven
+                websites that prioritize clarity, usability, and scalability.
+            </p>
+
+            <div class="btn-wrapper">
+                <a href="files/Resume.pdf" class="cta-btn" target="_blank">Download Resume PDF</a>
             </div>
         </div>
     </section>
-    
+
     <!-- Skills + Tech/Learning Layout -->
     <section class="skills-tech-layout">
         <!-- Left side -->
@@ -110,10 +123,10 @@
                     <div class="card">
                         <h3>Responsive Web Design</h3>
                         <p>Mobile-first approach, media queries</p>
-                </div>
-            </section> 
+                    </div>
+            </section>
         </div>
-    
+
         <!-- Right side -->
         <div class="right">
             <section class="tech">
@@ -128,54 +141,54 @@
                     <span class="badge"><i class="fab fa-github"></i> GitHub</span>
                 </div>
             </section>
-            
-    
-        <section class="learning">
-            <h2>Currently Learning</h2>
-            
-            <div class="progress">
-                <label>Advanced PHP</label>
-                <div class="progress-bar">
-                    <span style="width:70%"></span>
+
+
+            <section class="learning">
+                <h2>Currently Learning</h2>
+
+                <div class="progress">
+                    <label>Advanced PHP</label>
+                    <div class="progress-bar">
+                        <span style="width:70%"></span>
+                    </div>
                 </div>
-            </div>
-              
-            
-            <div class="progress">
-                <label>Database Optimization</label>
-                <div class="progress-bar">
-                    <span style="width:60%"></span>
+
+
+                <div class="progress">
+                    <label>Database Optimization</label>
+                    <div class="progress-bar">
+                        <span style="width:60%"></span>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="progress">
-                <label>JavaScript Fundamentals</label>
-                <div class="progress-bar">
-                    <span style="width:40%"></span>
+
+                <div class="progress">
+                    <label>JavaScript Fundamentals</label>
+                    <div class="progress-bar">
+                        <span style="width:40%"></span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </div>
     </section>
 
     <section class="professional-skills">
         <h2>Professional & Additional Skills</h2>
-    
+
         <div class="pro-grid">
             <div class="pro-card">
                 <h3>Languages</h3>
                 <p>English — Fluent</p>
                 <p>Spanish — Fluent</p>
             </div>
-    
+
             <div class="pro-card">
                 <h3>Productivity & Documentation</h3>
                 <p>Microsoft Office Suite (Word, Excel, PowerPoint)</p>
                 <p>Google Docs & Sheets</p>
                 <p>Structured documentation & reports</p>
             </div>
-            
-    
+
+
             <div class="pro-card">
                 <h3>Work Skills</h3>
                 <p>Technical Documentation</p>
@@ -188,32 +201,30 @@
     <!-- Projects Preview -->
     <section id="projects" class="projects">
         <h2>Featured Projects</h2>
-    
+
         <div class="grid">
-    
+
             <div class="card">
                 <div class="video-wrapper">
-                    <div class="video-thumbnail"
-                         onclick="loadVideo(this, 'q6G2WlneA84')"
-                         style="background-image: url('images/display-zoo.jpg');">
+                    <div class="video-thumbnail" onclick="loadVideo(this, 'q6G2WlneA84')"
+                        style="background-image: url('images/website-cover-4.jpg');">
                         <div class="play-button"></div>
                     </div>
                 </div>
-    
+
                 <h3>FINAL PROJECT</h3>
                 <h5>This project requires a local PHP/MySQL environment to run.</h5>
                 <p>A completed PHP and SQL website displaying both the back and front end.</p>
             </div>
-    
+
             <div class="card">
                 <div class="video-wrapper">
-                    <div class="video-thumbnail"
-                         onclick="loadVideo(this, 'VofvyO-tXG0')"
-                         style="background-image: url('images/Gym-display.jpg');">
+                    <div class="video-thumbnail" onclick="loadVideo(this, 'VofvyO-tXG0')"
+                        style="background-image: url('images/website-cover-2.jpg');">
                         <div class="play-button"></div>
                     </div>
                 </div>
-    
+
                 <h3>Fitness Club Website</h3>
                 <h5>This project requires a local PHP/MySQL environment to run.</h5>
                 <p>A working PHP and SQL based website.</p>
@@ -221,75 +232,24 @@
         </div>
     </section>
 
-    
-      
-    
-    
 
-    <!-- Footer -->
+
+
+
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Sinai Hernandez</p>
-        <div class="socials">
-            <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
-            <a href="#">X</a>
-            <a href="https://github.com/midniightcode">GitHub</a>
+        <div class="footer-content">
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/sinai-hernandez-416890338/">LinkedIn</a>
+                <a href="https://github.com/midniightcode">GitHub</a>
+            </div>
+            <p class="footer-copy">@midniightcode • UX/UI Developer & Web Designer/Developer</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        // Scroll fade background
-        window.addEventListener("scroll", () => {
-            const scrollTop = window.scrollY;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercent = scrollTop / docHeight;
-            const shade = Math.floor(scrollPercent * 255);
-            document.body.style.backgroundColor = `rgb(${shade}, ${shade}, ${shade})`;
-        });
-
-        // Dropdown toggle for mobile
-        document.querySelectorAll(".dropdown-toggle").forEach(toggle => {
-            toggle.addEventListener("click", e => {
-                e.preventDefault();
-                const parent = toggle.parentElement;
-                document.querySelectorAll(".dropdown").forEach(drop => {
-                    if (drop !== parent) drop.classList.remove("open");
-                });
-                parent.classList.toggle("open");
-            });
-        });
-
-        // Hamburger toggle
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("show");
-        });
-
-        //project video JS
-       function loadVideo(element, videoId) {
-        element.parentElement.innerHTML = `
-            <iframe 
-                src="https://www.youtube.com/embed/${videoId}?autoplay=1"
-                allow="autoplay; encrypted-media"
-                allowfullscreen>
-            </iframe>
-        `;
-    }
-    </script>
-
+    <script src="js/scripts.js"></script>
 </body>
 
 
 </html>
-
-
-
-
-
-
-
-
-
-
